@@ -1,0 +1,99 @@
+// Prisma Schema for Civic Hub Thailand (Neon Serverless PostgreSQL)
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider  = "postgresql"
+  url       = env("DATABASE_URL")
+  directUrl = env("DIRECT_URL")
+}
+
+enum Generation {
+  FD // 2005 - 2012 (Double Wishbone / Modern Classic)
+  FB // 2012 - 2016 (Econ Mode / i-VTEC Family Cruiser)
+  FC // 2016 - 2021 (Sedan Fastback / VTEC TURBO)
+  FK // 2017 - 2021 (5-Door Hatchback / Sport DNA)
+  FE // 2021 - Present (Honda SENSING & e:HEV)
+}
+
+enum PaymentType {
+  FINANCE   // จัดไฟแนนซ์ได้ / มีบริการผ่อน
+  CASH_ONLY // ขายสดเท่านั้น
+}
+
+enum CarStatus {
+  AVAILABLE // ว่างพร้อมขาย
+  RESERVED  // ติดจอง
+  SOLD      // ขายแล้ว
+}
+
+enum ConditionStyle {
+  STOCK // เดิมโรงงาน OEM
+  TUNED // แต่งซิ่ง / Track & Street
+}
+
+model Car {
+  id             String         @id @default(uuid())
+  slug           String         @unique
+  title          String
+  gen            Generation
+  year           Int
+  price          Int            // THB
+  mileage        Int            // Kilometers
+  transmission   String         // e.g. "MT 5-Speed", "AT 5-Speed", "CVT with Paddle Shift"
+  engineCode     String         // e.g. "R18A 1.8L", "K20Z 2.0L", "L15B7 VTEC TURBO 1.5L"
+  color          String         // e.g. "Championship White", "Taffeta White", "Sonic Gray Pearl"
+  paymentType    PaymentType
+  status         CarStatus      @default(AVAILABLE)
+  conditionStyle ConditionStyle @default(STOCK)
+  cashOnlyReason String?        // Reason if CASH_ONLY, e.g. "รถปีลึก/โมดิฟายด์ชุดใหญ่ เหมาะสำหรับสายซิ่งตัดสด"
+  
+  images         CarImages?
+  specs          CarSpecs?
+  leads          Lead[]
+
+  createdAt      DateTime       @default(now())
+  updatedAt      DateTime       @updatedAt
+
+  @@index([gen])
+  @@index([paymentType])
+  @@index([status])
+}
+
+model CarImages {
+  id        String   @id @default(uuid())
+  carId     String   @unique
+  car       Car      @relation(fields: [carId], references: [id], onDelete: Cascade)
+  exterior  String   // Photo: Exterior angle
+  interior  String   // Photo: Cockpit / Steering / Seats
+  engine    String   // Photo: Clean engine bay
+  extra     String   // Photo: Rear / Inspection / Underbody
+  createdAt DateTime @default(now())
+}
+
+model CarSpecs {
+  id               String   @id @default(uuid())
+  carId            String   @unique
+  car              Car      @relation(fields: [carId], references: [id], onDelete: Cascade)
+  exteriorDesc     String   // Detailed exterior features & condition
+  interiorDesc     String   // Detailed interior condition & electronics
+  engineDesc       String   // Engine tuning, maintenance, gearbox status
+  chassisGuarantee String   // 175-Point chassis certification details
+  createdAt        DateTime @default(now())
+}
+
+model Lead {
+  id              String       @id @default(uuid())
+  carId           String?
+  car             Car?         @relation(fields: [carId], references: [id], onDelete: SetNull)
+  customerName    String
+  phone           String
+  lineId          String?
+  financingOption PaymentType?
+  note            String?
+  createdAt       DateTime     @default(now())
+
+  @@index([carId])
+}

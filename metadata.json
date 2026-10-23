@@ -1,0 +1,6 @@
+{
+  "name": "Civic Hub Thailand - Honda Civic Specialist Dealership",
+  "description": "Thailand's premier Honda Civic used car dealership specializing in FD, FB, FC, FK, and FE generations with 175-point inspection, real-time loan calculator, and certified warranty.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

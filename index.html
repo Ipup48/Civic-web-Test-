@@ -1,0 +1,1628 @@
+<!DOCTYPE html>
+<html lang="th" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Civic Hub Thailand - ศูนย์รวม Honda Civic FD, FB, FC, FK, FE มือสองคัดเกรด</title>
+  <meta name="description" content="ศูนย์รวม Honda Civic มือสองคุณภาพ คัดเกรด A ทุกโฉม FD, FB, FC, FK, FE แยกชัดเจนรถจัดไฟแนนซ์ได้และรถขายสด ตรวจสภาพ 175 จุด การันตีไมล์แท้ ไม่ชนหนัก ไม่น้ำท่วม">
+
+  <!-- Google Fonts: Prompt & Outfit -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Prompt:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              red: '#DC2626',
+              redHover: '#B91C1C',
+              dark: '#0B0D13',
+              card: '#131722',
+              cardHover: '#1A2030',
+              border: '#232A3B',
+              borderLight: '#323B52'
+            }
+          },
+          fontFamily: {
+            sans: ['Prompt', 'sans-serif'],
+            heading: ['Outfit', 'Prompt', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Lucide Icons CDN -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <style>
+    body {
+      font-family: 'Prompt', sans-serif;
+      background-color: #0B0D13;
+      color: #F1F5F9;
+    }
+    .font-heading {
+      font-family: 'Outfit', 'Prompt', sans-serif;
+    }
+    /* Custom scrollbar */
+    ::-webkit-scrollbar {
+      width: 7px;
+      height: 7px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #0B0D13;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #232A3B;
+      border-radius: 4px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #DC2626;
+    }
+  </style>
+</head>
+<body class="bg-[#0B0D13] text-slate-100 min-h-screen flex flex-col selection:bg-red-600 selection:text-white pb-20 md:pb-0">
+
+  <!-- ============================================================== -->
+  <!-- 1. HEADER & NAVIGATION                                         -->
+  <!-- ============================================================== -->
+  <header class="sticky top-0 z-40 bg-[#0E1119]/95 backdrop-blur-md border-b border-[#232A3B]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-18 flex items-center justify-between gap-4">
+      
+      <!-- Brand Logo -->
+      <a href="#" class="flex items-center gap-3 shrink-0 group">
+        <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-red-600 to-red-800 flex items-center justify-center font-heading font-black text-xl text-white shadow-lg shadow-red-950/60 border border-red-500/30 group-hover:scale-105 transition-transform">
+          H
+        </div>
+        <div>
+          <div class="flex items-center gap-1.5">
+            <span class="font-heading font-black text-xl tracking-tight text-white uppercase">
+              CIVIC<span class="text-red-500 font-extrabold ml-1">HUB</span>
+            </span>
+            <span class="text-[10px] uppercase font-bold tracking-wider px-1.5 py-0.5 rounded bg-red-600/20 text-red-400 border border-red-500/30">
+              THAILAND
+            </span>
+          </div>
+          <div class="text-[11px] text-slate-400 font-normal">
+            Specialist FD · FB · FC · FK · FE
+          </div>
+        </div>
+      </a>
+
+      <!-- Quick Generation Buttons on Header -->
+      <div class="hidden lg:flex items-center gap-1.5 p-1 rounded-xl bg-[#141824] border border-[#232A3B]">
+        <button onclick="handleSelectGeneration('FD')" class="px-3 py-1.5 rounded-lg text-xs font-semibold font-heading hover:bg-red-600 hover:text-white transition-colors text-slate-300 cursor-pointer">
+          FD
+        </button>
+        <span class="text-slate-600 text-xs">·</span>
+        <button onclick="handleSelectGeneration('FB')" class="px-3 py-1.5 rounded-lg text-xs font-semibold font-heading hover:bg-red-600 hover:text-white transition-colors text-slate-300 cursor-pointer">
+          FB
+        </button>
+        <span class="text-slate-600 text-xs">·</span>
+        <button onclick="handleSelectGeneration('FC')" class="px-3 py-1.5 rounded-lg text-xs font-semibold font-heading hover:bg-red-600 hover:text-white transition-colors text-slate-300 cursor-pointer">
+          FC
+        </button>
+        <span class="text-slate-600 text-xs">·</span>
+        <button onclick="handleSelectGeneration('FK')" class="px-3 py-1.5 rounded-lg text-xs font-semibold font-heading hover:bg-red-600 hover:text-white transition-colors text-slate-300 cursor-pointer">
+          FK
+        </button>
+        <span class="text-slate-600 text-xs">·</span>
+        <button onclick="handleSelectGeneration('FE')" class="px-3 py-1.5 rounded-lg text-xs font-semibold font-heading hover:bg-red-600 hover:text-white transition-colors text-slate-300 cursor-pointer">
+          FE
+        </button>
+      </div>
+
+      <!-- Quick Call & LINE Contact Buttons -->
+      <div class="flex items-center gap-2.5">
+        <a href="tel:0818882484" class="hidden sm:flex items-center gap-2 px-3.5 py-2 text-xs font-medium text-slate-200 bg-slate-800/90 hover:bg-slate-700 border border-slate-700 rounded-xl transition-all">
+          <i data-lucide="phone" class="w-3.5 h-3.5 text-red-500"></i>
+          <span>081-888-2484</span>
+        </a>
+
+        <a href="https://line.me" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 px-3.5 py-2 text-xs font-semibold text-white bg-emerald-600 hover:bg-emerald-500 rounded-xl shadow-md shadow-emerald-950/40 transition-all">
+          <i data-lucide="message-circle" class="w-4 h-4"></i>
+          <span>LINE Official</span>
+        </a>
+
+        <button onclick="scrollToLoanCalculator()" class="hidden md:flex px-3.5 py-2 text-xs font-semibold text-white bg-red-600 hover:bg-red-500 rounded-xl shadow-md shadow-red-950/40 transition-all items-center gap-1.5 cursor-pointer">
+          <i data-lucide="calculator" class="w-3.5 h-3.5"></i>
+          <span>คำนวณค่างวด</span>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- ============================================================== -->
+  <!-- 2. HERO & VISUAL GENERATION SELECTOR                           -->
+  <!-- ============================================================== -->
+  <section class="relative overflow-hidden bg-gradient-to-b from-[#0E1119] via-[#121622] to-[#0B0D13] pt-10 pb-14 lg:pt-14 lg:pb-20 border-b border-[#232A3B]">
+    <!-- Ambient Red Glow -->
+    <div class="absolute top-0 left-1/2 -translate-x-1/2 w-3/4 max-w-4xl h-80 bg-red-600/10 blur-[120px] pointer-events-none rounded-full"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      
+      <!-- Headline & Tagline -->
+      <div class="text-center max-w-3xl mx-auto space-y-4">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-red-950/60 border border-red-500/30 text-red-400 text-xs font-mono font-semibold">
+          <span class="w-1.5 h-1.5 rounded-full bg-red-500"></span>
+          <span>SPECIALIZED USED HONDA CIVIC DEALERSHIP</span>
+        </div>
+
+        <h1 class="text-3xl sm:text-5xl lg:text-6xl font-extrabold text-white font-heading tracking-tight leading-tight">
+          แหล่งรวม <span class="text-transparent bg-clip-text bg-gradient-to-r from-white via-slate-100 to-red-400">Honda Civic มือสอง</span><br class="hidden sm:block" />
+          คัดเกรด A <span class="text-red-500">ครบทุกโฉม FD - FE</span>
+        </h1>
+
+        <p class="text-slate-300 text-sm sm:text-base leading-relaxed max-w-2xl mx-auto">
+          โชว์รูมเฉพาะทางแห่งเดียวที่ใช้ข้อมูลสเปกศูนย์ไทยแท้ 100% พร้อมรูปเจาะลึก 4 มุม และระบบแยกชัดเจนระหว่าง <span class="text-emerald-400 font-semibold">รถจัดไฟแนนซ์ได้</span> และ <span class="text-amber-400 font-semibold">รถขายสดราคาพิเศษ</span>
+        </p>
+      </div>
+
+      <!-- VISUAL GENERATION SELECTOR (5 Large Interactive Cards) -->
+      <div class="mt-10 lg:mt-12">
+        <div class="flex items-center justify-between mb-4">
+          <div class="text-xs font-mono font-bold uppercase tracking-wider text-slate-400 flex items-center gap-2">
+            <i data-lucide="sparkles" class="w-4 h-4 text-red-500"></i>
+            <span>เลือกดูตามเจเนอเรชันที่คุณสนใจ (Visual Generation Selector)</span>
+          </div>
+          <button onclick="handleSelectGeneration('ALL')" class="text-xs text-red-400 hover:text-red-300 underline font-medium cursor-pointer">
+            ดูทุกโฉมพร้อมกัน
+          </button>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
+          
+          <!-- Card 1: FD -->
+          <button onclick="handleSelectGeneration('FD')" class="group relative rounded-2xl bg-[#141824] hover:bg-[#1A2032] border border-[#232A3B] hover:border-red-500/80 p-5 text-left transition-all duration-300 hover:shadow-xl hover:shadow-red-950/30 flex flex-col justify-between cursor-pointer">
+            <div>
+              <div class="flex items-center justify-between mb-2">
+                <span class="font-heading font-black text-3xl text-white group-hover:text-red-500 transition-colors">
+                  FD
+                </span>
+                <span class="text-[11px] font-mono text-slate-400 bg-black/40 px-2 py-0.5 rounded">
+                  2005 - 2012
+                </span>
+              </div>
+              <div class="text-xs font-bold text-slate-200 mb-1">
+                Civic FD (Gen 8)
+              </div>
+              <p class="text-[11px] text-slate-400 leading-relaxed">
+                ไฟท้ายโดนัท / แปดเหลี่ยม ตำนานนางฟ้าสายซิ่ง (มีทั้งคันจบสดและจัดไฟแนนซ์ได้)
+              </p>
+            </div>
+            <div class="mt-4 pt-3 border-t border-slate-800 flex items-center justify-between text-xs text-red-400 font-semibold group-hover:translate-x-1 transition-transform">
+              <span>คลิกดูสต็อก FD</span>
+              <i data-lucide="chevron-right" class="w-4 h-4"></i>
+            </div>
+          </button>
+
+          <!-- Card 2: FB -->
+          <button onclick="handleSelectGeneration('FB')" class="group relative rounded-2xl bg-[#141824] hover:bg-[#1A2032] border border-[#232A3B] hover:border-red-500/80 p-5 text-left transition-all duration-300 hover:shadow-xl hover:shadow-red-950/30 flex flex-col justify-between cursor-pointer">
+            <div>
+              <div class="flex items-center justify-between mb-2">
+                <span class="font-heading font-black text-3xl text-white group-hover:text-red-500 transition-colors">
+                  FB
+                </span>
+                <span class="text-[11px] font-mono text-slate-400 bg-black/40 px-2 py-0.5 rounded">
+                  2012 - 2016
+                </span>
+              </div>
+              <div class="text-xs font-bold text-slate-200 mb-1">
+                Civic FB (Gen 9)
+              </div>
+              <p class="text-[11px] text-slate-400 leading-relaxed">
+                รถบ้านขับสบาย ออปชันครบ จอ i-MID และโหมด ECON ประหยัดน้ำมัน คุ้มค่าเงิน
+              </p>
+            </div>
+            <div class="mt-4 pt-3 border-t border-slate-800 flex items-center justify-between text-xs text-red-400 font-semibold group-hover:translate-x-1 transition-transform">
+              <span>คลิกดูสต็อก FB</span>
+              <i data-lucide="chevron-right" class="w-4 h-4"></i>
+            </div>
+          </button>
+
+          <!-- Card 3: FC -->
+          <button onclick="handleSelectGeneration('FC')" class="group relative rounded-2xl bg-[#141824] hover:bg-[#1A2032] border border-[#232A3B] hover:border-red-500/80 p-5 text-left transition-all duration-300 hover:shadow-xl hover:shadow-red-950/30 flex flex-col justify-between cursor-pointer">
+            <div>
+              <div class="flex items-center justify-between mb-2">
+                <span class="font-heading font-black text-3xl text-white group-hover:text-red-500 transition-colors">
+                  FC
+                </span>
+                <span class="text-[11px] font-mono text-slate-400 bg-black/40 px-2 py-0.5 rounded">
+                  2016 - 2021
+                </span>
+              </div>
+              <div class="text-xs font-bold text-slate-200 mb-1">
+                Civic FC Sedan
+              </div>
+              <p class="text-[11px] text-slate-400 leading-relaxed">
+                ซีดาน 4 ประตู ฟาสต์แบ็ก สปอร์ตหรู เครื่อง 1.8 และ 1.5 VTEC Turbo RS SENSING
+              </p>
+            </div>
+            <div class="mt-4 pt-3 border-t border-slate-800 flex items-center justify-between text-xs text-red-400 font-semibold group-hover:translate-x-1 transition-transform">
+              <span>คลิกดูสต็อก FC</span>
+              <i data-lucide="chevron-right" class="w-4 h-4"></i>
+            </div>
+          </button>
+
+          <!-- Card 4: FK -->
+          <button onclick="handleSelectGeneration('FK')" class="group relative rounded-2xl bg-[#141824] hover:bg-[#1A2032] border border-[#232A3B] hover:border-red-500/80 p-5 text-left transition-all duration-300 hover:shadow-xl hover:shadow-red-950/30 flex flex-col justify-between cursor-pointer">
+            <div>
+              <div class="flex items-center justify-between mb-2">
+                <span class="font-heading font-black text-3xl text-white group-hover:text-red-500 transition-colors">
+                  FK
+                </span>
+                <span class="text-[11px] font-mono text-slate-400 bg-black/40 px-2 py-0.5 rounded">
+                  2017 - 2021
+                </span>
+              </div>
+              <div class="text-xs font-bold text-slate-200 mb-1">
+                Civic FK Hatchback
+              </div>
+              <p class="text-[11px] text-slate-400 leading-relaxed">
+                แฮตช์แบ็ก 5 ประตู สปอร์ตสายซิ่ง ท่อคู่กลาง หายาก ราคาแข็งแกร่งไม่เคยตก
+              </p>
+            </div>
+            <div class="mt-4 pt-3 border-t border-slate-800 flex items-center justify-between text-xs text-red-400 font-semibold group-hover:translate-x-1 transition-transform">
+              <span>คลิกดูสต็อก FK</span>
+              <i data-lucide="chevron-right" class="w-4 h-4"></i>
+            </div>
+          </button>
+
+          <!-- Card 5: FE -->
+          <button onclick="handleSelectGeneration('FE')" class="group relative rounded-2xl bg-[#141824] hover:bg-[#1A2032] border border-[#232A3B] hover:border-red-500/80 p-5 text-left transition-all duration-300 hover:shadow-xl hover:shadow-red-950/30 flex flex-col justify-between cursor-pointer">
+            <div>
+              <div class="flex items-center justify-between mb-2">
+                <span class="font-heading font-black text-3xl text-white group-hover:text-red-500 transition-colors">
+                  FE
+                </span>
+                <span class="text-[11px] font-mono text-slate-400 bg-black/40 px-2 py-0.5 rounded">
+                  2021 - ปัจจุบัน
+                </span>
+              </div>
+              <div class="text-xs font-bold text-slate-200 mb-1">
+                Civic FE (Gen 11)
+              </div>
+              <p class="text-[11px] text-slate-400 leading-relaxed">
+                โฉมปัจจุบัน เรียบหรู 178 แรงม้า VTEC TURBO และ Honda SENSING วารันตีศูนย์ยังเหลือ
+              </p>
+            </div>
+            <div class="mt-4 pt-3 border-t border-slate-800 flex items-center justify-between text-xs text-red-400 font-semibold group-hover:translate-x-1 transition-transform">
+              <span>คลิกดูสต็อก FE</span>
+              <i data-lucide="chevron-right" class="w-4 h-4"></i>
+            </div>
+          </button>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============================================================== -->
+  <!-- 3. DUAL-LAYER FILTER SYSTEM & CAR INVENTORY                    -->
+  <!-- ============================================================== -->
+  <section id="inventory-section" class="py-10 lg:py-16 bg-[#0B0D13]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Filter Layer 1: Financing & Payment Type (Key Focus) -->
+      <div class="p-4 sm:p-5 rounded-2xl bg-[#141824] border border-[#232A3B] mb-6 space-y-4 shadow-xl">
+        
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-slate-800 pb-3">
+          <div class="flex items-center gap-2">
+            <i data-lucide="layers" class="w-4 h-4 text-red-500"></i>
+            <span class="text-xs font-bold uppercase tracking-wider text-white font-mono">
+              เงื่อนไขการซื้อ (Payment Type Filter):
+            </span>
+          </div>
+          <span class="text-xs text-slate-400">
+            แยกชัดเจนระหว่างรถจัดไฟแนนซ์ได้ (มีตารางผ่อน) และรถขายสดราคาพิเศษ
+          </span>
+        </div>
+
+        <!-- Layer 1 Tabs -->
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-2.5">
+          
+          <button onclick="setPaymentTypeFilter('ALL')" id="pay-ALL" class="pay-tab py-2.5 px-4 rounded-xl text-xs sm:text-sm font-semibold transition-all flex items-center justify-center gap-2 bg-red-600 text-white shadow-md shadow-red-950 border border-red-500 cursor-pointer">
+            <i data-lucide="check-check" class="w-4 h-4"></i>
+            <span>ทั้งหมด (ทุกเงื่อนไข)</span>
+          </button>
+
+          <button onclick="setPaymentTypeFilter('finance')" id="pay-finance" class="pay-tab py-2.5 px-4 rounded-xl text-xs sm:text-sm font-semibold transition-all flex items-center justify-center gap-2 bg-[#0B0D13] text-slate-300 hover:text-white border border-slate-800 cursor-pointer">
+            <i data-lucide="credit-card" class="w-4 h-4 text-emerald-400"></i>
+            <span>🟢 จัดไฟแนนซ์ได้ / มีบริการผ่อน</span>
+          </button>
+
+          <button onclick="setPaymentTypeFilter('cash')" id="pay-cash" class="pay-tab py-2.5 px-4 rounded-xl text-xs sm:text-sm font-semibold transition-all flex items-center justify-center gap-2 bg-[#0B0D13] text-slate-300 hover:text-white border border-slate-800 cursor-pointer">
+            <i data-lucide="banknote" class="w-4 h-4 text-amber-400"></i>
+            <span>🟡 ขายสดเท่านั้น (Cash Only)</span>
+          </button>
+
+        </div>
+
+      </div>
+
+      <!-- Filter Layer 2: Generation Tabs & Sub-filters -->
+      <div class="flex flex-wrap items-center justify-between gap-4 border-b border-slate-800 pb-4">
+        
+        <!-- Generation Tabs -->
+        <div class="flex items-center gap-1.5 overflow-x-auto pb-1 max-w-full">
+          <button onclick="handleSelectGeneration('ALL')" id="tab-ALL" class="gen-tab px-3.5 py-2 rounded-xl text-xs sm:text-sm font-semibold transition-all bg-red-600 text-white shadow-md shadow-red-950 cursor-pointer">
+            ทุกโฉม
+          </button>
+          <button onclick="handleSelectGeneration('FD')" id="tab-FD" class="gen-tab px-3.5 py-2 rounded-xl text-xs sm:text-sm font-semibold transition-all bg-slate-900 text-slate-300 hover:text-white border border-slate-800 cursor-pointer">
+            Civic FD
+          </button>
+          <button onclick="handleSelectGeneration('FB')" id="tab-FB" class="gen-tab px-3.5 py-2 rounded-xl text-xs sm:text-sm font-semibold transition-all bg-slate-900 text-slate-300 hover:text-white border border-slate-800 cursor-pointer">
+            Civic FB
+          </button>
+          <button onclick="handleSelectGeneration('FC')" id="tab-FC" class="gen-tab px-3.5 py-2 rounded-xl text-xs sm:text-sm font-semibold transition-all bg-slate-900 text-slate-300 hover:text-white border border-slate-800 cursor-pointer">
+            Civic FC
+          </button>
+          <button onclick="handleSelectGeneration('FK')" id="tab-FK" class="gen-tab px-3.5 py-2 rounded-xl text-xs sm:text-sm font-semibold transition-all bg-slate-900 text-slate-300 hover:text-white border border-slate-800 cursor-pointer">
+            Civic FK
+          </button>
+          <button onclick="handleSelectGeneration('FE')" id="tab-FE" class="gen-tab px-3.5 py-2 rounded-xl text-xs sm:text-sm font-semibold transition-all bg-slate-900 text-slate-300 hover:text-white border border-slate-800 cursor-pointer">
+            Civic FE
+          </button>
+        </div>
+
+        <!-- Sub-filters: OEM vs Tuned & Sorting -->
+        <div class="flex items-center gap-2.5 text-xs">
+          
+          <!-- OEM vs Tuned -->
+          <div class="flex items-center bg-slate-900 rounded-xl p-1 border border-slate-800">
+            <button onclick="setConditionFilter('ALL')" id="cond-ALL" class="cond-btn px-2.5 py-1 rounded-lg font-medium bg-slate-800 text-white cursor-pointer">
+              ทุกสไตล์
+            </button>
+            <button onclick="setConditionFilter('stock')" id="cond-stock" class="cond-btn px-2.5 py-1 rounded-lg font-medium text-slate-400 hover:text-white cursor-pointer">
+              เดิมโรงงาน (Stock)
+            </button>
+            <button onclick="setConditionFilter('tuned')" id="cond-tuned" class="cond-btn px-2.5 py-1 rounded-lg font-medium text-slate-400 hover:text-white cursor-pointer">
+              แต่งซิ่ง (Tuned)
+            </button>
+          </div>
+
+          <!-- Sort Select -->
+          <select id="sort-select" onchange="setSortOrder(this.value)" class="bg-slate-900 text-slate-200 px-3 py-1.5 rounded-xl border border-slate-800 focus:outline-none focus:border-red-500 cursor-pointer">
+            <option value="PRICE_ASC">ราคา: ต่ำไปสูง</option>
+            <option value="PRICE_DESC">ราคา: สูงไปต่ำ</option>
+            <option value="YEAR_DESC">ปีจดทะเบียน: ใหม่สุด</option>
+          </select>
+
+        </div>
+
+      </div>
+
+      <!-- Current Filter Summary Banner -->
+      <div class="py-3 flex items-center justify-between text-xs text-slate-400">
+        <div>
+          แสดงผล: <strong id="car-count-display" class="text-white font-mono font-bold text-sm">0</strong> คัน 
+          <span id="active-filter-text" class="text-slate-400 ml-1"></span>
+        </div>
+        <button onclick="resetAllFilters()" class="text-red-400 hover:text-red-300 underline font-medium cursor-pointer">
+          ล้างตัวกรองทั้งหมด
+        </button>
+      </div>
+
+      <!-- Car Cards Grid -->
+      <div id="cars-grid" class="mt-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+        <!-- Rendered by JavaScript -->
+      </div>
+
+      <!-- Empty State -->
+      <div id="empty-state" class="hidden py-16 text-center space-y-4 rounded-2xl bg-[#141824] border border-slate-800 max-w-md mx-auto p-8 my-6">
+        <i data-lucide="search-x" class="w-12 h-12 text-slate-500 mx-auto"></i>
+        <h3 class="text-base font-bold text-white">ไม่พบรถที่ตรงกับเงื่อนไขการค้นหา</h3>
+        <p class="text-xs text-slate-400">ลองเปลี่ยนเงื่อนไขชำระเงิน หรือคลิกเลือกเจเนอเรชันอื่น</p>
+        <button onclick="resetAllFilters()" class="px-4 py-2 rounded-xl bg-red-600 hover:bg-red-500 text-white text-xs font-semibold cursor-pointer">
+          รีเซ็ตตัวกรองทั้งหมด
+        </button>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============================================================== -->
+  <!-- 4. THAI AUTO LOAN CALCULATOR SECTION                          -->
+  <!-- ============================================================== -->
+  <section id="loan-calculator-section" class="py-14 bg-[#0E1119] border-t border-[#232A3B]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-2xl mx-auto mb-8">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-red-950/60 border border-red-500/30 text-red-400 text-xs font-mono font-semibold mb-2">
+          <i data-lucide="calculator" class="w-3.5 h-3.5"></i>
+          <span>THAI USED CAR AUTO LOAN CALCULATOR</span>
+        </div>
+        <h2 class="text-2xl sm:text-3xl font-extrabold text-white font-heading">
+          เครื่องคำนวณสินเชื่อและค่างวดไฟแนนซ์ไทย
+        </h2>
+        <p class="text-xs sm:text-sm text-slate-400 mt-2">
+          คำนวณตามสูตรดอกเบี้ยคงที่ (Flat Rate) มาตรฐานสถาบันการเงินไทย พร้อมรวมภาษีมูลค่าเพิ่ม 7% (VAT)
+        </p>
+      </div>
+
+      <div class="max-w-4xl mx-auto rounded-2xl bg-[#141824] border border-[#232A3B] p-6 sm:p-8 shadow-2xl">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+          
+          <!-- Inputs Column -->
+          <div class="lg:col-span-7 space-y-4 text-xs">
+            
+            <!-- Quick Car Selector (Finance Only) -->
+            <div>
+              <label class="block font-semibold text-slate-300 mb-1.5">
+                เลือกรถที่จัดไฟแนนซ์ได้จากสต็อก หรือปรับราคาเอง:
+              </label>
+              <select id="calc-car-select" onchange="handleCalcCarChange(this.value)" class="w-full bg-[#0B0D13] border border-slate-700 rounded-xl px-3.5 py-2.5 text-xs text-white focus:outline-none focus:border-red-500 cursor-pointer">
+                <!-- Populated via JS -->
+              </select>
+            </div>
+
+            <!-- Price Slider -->
+            <div>
+              <div class="flex justify-between items-baseline mb-1">
+                <span class="font-semibold text-slate-300">ราคารถยนต์เงินสด:</span>
+                <span id="calc-price-display" class="font-mono text-base font-bold text-white">฿0</span>
+              </div>
+              <input type="range" id="calc-price-range" min="200000" max="1100000" step="10000" value="689000" oninput="handlePriceSlider(this.value)" class="w-full accent-red-600 bg-slate-800 h-2 rounded-lg cursor-pointer">
+            </div>
+
+            <!-- Down Payment Preset Chips & Slider -->
+            <div>
+              <div class="flex justify-between items-baseline mb-1.5">
+                <span class="font-semibold text-slate-300">
+                  เงินดาวน์: <span id="calc-down-percent" class="text-red-400 font-bold">10%</span>
+                </span>
+                <span id="calc-down-amount" class="font-mono text-xs font-bold text-white">฿0</span>
+              </div>
+
+              <div class="grid grid-cols-5 gap-1.5 mb-2">
+                <button type="button" onclick="setCalcDown(0)" id="down-chip-0" class="down-chip py-1.5 rounded-lg border font-mono font-bold text-xs bg-slate-800 text-slate-300 border-slate-700 cursor-pointer">0% (ฟรีดาวน์)</button>
+                <button type="button" onclick="setCalcDown(10)" id="down-chip-10" class="down-chip py-1.5 rounded-lg border font-mono font-bold text-xs bg-red-600 text-white border-red-500 cursor-pointer">10%</button>
+                <button type="button" onclick="setCalcDown(15)" id="down-chip-15" class="down-chip py-1.5 rounded-lg border font-mono font-bold text-xs bg-slate-800 text-slate-300 border-slate-700 cursor-pointer">15%</button>
+                <button type="button" onclick="setCalcDown(20)" id="down-chip-20" class="down-chip py-1.5 rounded-lg border font-mono font-bold text-xs bg-slate-800 text-slate-300 border-slate-700 cursor-pointer">20%</button>
+                <button type="button" onclick="setCalcDown(30)" id="down-chip-30" class="down-chip py-1.5 rounded-lg border font-mono font-bold text-xs bg-slate-800 text-slate-300 border-slate-700 cursor-pointer">30%</button>
+              </div>
+            </div>
+
+            <!-- Loan Term Period (Years / Months) -->
+            <div>
+              <label class="block font-semibold text-slate-300 mb-1.5">
+                จำนวนปีที่ต้องการผ่อน (Loan Period):
+              </label>
+              <div class="grid grid-cols-4 gap-2">
+                <button type="button" onclick="setCalcPeriod(48)" id="term-chip-48" class="term-chip py-2 rounded-xl border text-center bg-slate-800 text-slate-300 border-slate-700 cursor-pointer">
+                  <div class="font-bold text-xs">4 ปี</div>
+                  <div class="text-[10px] text-slate-400">48 งวด</div>
+                </button>
+                <button type="button" onclick="setCalcPeriod(60)" id="term-chip-60" class="term-chip py-2 rounded-xl border text-center bg-slate-800 text-slate-300 border-slate-700 cursor-pointer">
+                  <div class="font-bold text-xs">5 ปี</div>
+                  <div class="text-[10px] text-slate-400">60 งวด</div>
+                </button>
+                <button type="button" onclick="setCalcPeriod(72)" id="term-chip-72" class="term-chip py-2 rounded-xl border text-center bg-slate-800 text-slate-300 border-slate-700 cursor-pointer">
+                  <div class="font-bold text-xs">6 ปี</div>
+                  <div class="text-[10px] text-slate-400">72 งวด</div>
+                </button>
+                <button type="button" onclick="setCalcPeriod(84)" id="term-chip-84" class="term-chip py-2 rounded-xl border text-center bg-red-600 text-white border-red-500 cursor-pointer">
+                  <div class="font-bold text-xs">7 ปี</div>
+                  <div class="text-[10px] text-red-100">84 งวด</div>
+                </button>
+              </div>
+            </div>
+
+            <div class="text-[11px] text-slate-400 bg-black/30 p-2.5 rounded-xl border border-slate-800 flex items-center justify-between">
+              <span>อัตราดอกเบี้ยเฉลี่ยรถยนต์มือสอง:</span>
+              <span class="font-mono font-bold text-emerald-400">3.25% ต่อปี (Flat Rate)</span>
+            </div>
+
+          </div>
+
+          <!-- Big Result Box Column -->
+          <div class="lg:col-span-5 rounded-2xl bg-gradient-to-b from-[#181E2E] to-[#0E1119] border border-red-500/40 p-6 text-center space-y-4">
+            <span class="text-xs uppercase font-mono font-bold text-slate-400 tracking-wider">
+              ยอดผ่อนชำระต่อเดือน (รวม VAT 7%)
+            </span>
+
+            <div class="py-1">
+              <div id="calc-monthly-result" class="text-4xl sm:text-5xl font-black font-heading text-red-500 tracking-tight">
+                ฿0
+              </div>
+              <div class="text-xs text-slate-300 mt-1">
+                บาท / เดือน (<span id="calc-term-summary">84 งวด</span>)
+              </div>
+            </div>
+
+            <!-- Breakdown -->
+            <div class="text-xs space-y-1.5 py-3 border-y border-slate-800 text-slate-300 text-left">
+              <div class="flex justify-between">
+                <span>ยอดจัดสินเชื่อ (เงินต้น):</span>
+                <span id="calc-principal-display" class="font-mono text-white font-semibold">฿0</span>
+              </div>
+              <div class="flex justify-between">
+                <span>ดอกเบี้ยรวมตลอดสัญญา:</span>
+                <span id="calc-interest-display" class="font-mono text-slate-300">฿0</span>
+              </div>
+              <div class="flex justify-between">
+                <span>ภาษีมูลค่าเพิ่ม 7% (ต่อเดือน):</span>
+                <span id="calc-vat-display" class="font-mono text-slate-300">฿0</span>
+              </div>
+            </div>
+
+            <div class="text-[11px] text-slate-400 text-left">
+              💡 รายได้ผู้กู้ขั้นต่ำแนะนำ: <span id="calc-salary-rec" class="text-red-400 font-bold font-mono">฿0</span>/เดือน
+            </div>
+
+            <button onclick="shareLoanToLine()" class="w-full py-3 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-semibold text-xs transition-all flex items-center justify-center gap-2 shadow-lg shadow-emerald-950/50 cursor-pointer">
+              <i data-lucide="message-circle" class="w-4 h-4"></i>
+              <span>ส่งยอดคำนวณนี้ปรึกษาไฟแนนซ์ทาง LINE</span>
+            </button>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============================================================== -->
+  <!-- 5. DEEP-DIVE CAR DETAIL MODAL (Interactive Multi-Angle Gallery) -->
+  <!-- ============================================================== -->
+  <div id="car-modal" class="hidden fixed inset-0 z-50 overflow-y-auto bg-black/90 backdrop-blur-md flex items-center justify-center p-3 sm:p-4">
+    <div class="relative w-full max-w-5xl bg-[#141824] border border-[#232A3B] rounded-2xl shadow-2xl overflow-hidden max-h-[94vh] flex flex-col my-auto">
+      
+      <!-- Modal Header -->
+      <div class="px-5 py-3.5 border-b border-slate-800 flex items-center justify-between gap-4 bg-[#10131E]">
+        <div class="flex items-center gap-2.5 overflow-hidden">
+          <span id="modal-gen-badge" class="px-2.5 py-0.5 rounded bg-red-600 text-white font-heading font-black text-xs shrink-0">
+            CIVIC
+          </span>
+          <span id="modal-pay-badge" class="px-2.5 py-0.5 rounded font-bold text-xs shrink-0">
+            สถานะชำระเงิน
+          </span>
+          <h3 id="modal-title" class="text-sm sm:text-base font-bold text-white truncate font-heading">
+            ชื่อรุ่นรถ
+          </h3>
+        </div>
+        <button onclick="closeCarModal()" class="p-1.5 text-slate-400 hover:text-white rounded-lg hover:bg-slate-800 cursor-pointer">
+          <i data-lucide="x" class="w-5 h-5"></i>
+        </button>
+      </div>
+
+      <!-- Modal Body -->
+      <div class="overflow-y-auto flex-1 p-5 sm:p-6 space-y-6">
+        
+        <!-- Multi-Angle Gallery & Purchase Box Grid -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
+          
+          <!-- Column 1: Multi-Angle Gallery -->
+          <div class="lg:col-span-7 space-y-3">
+            
+            <!-- Large Main Photo -->
+            <div class="relative aspect-[16/10] w-full rounded-2xl overflow-hidden bg-black border border-slate-800">
+              <img id="modal-main-img" src="" alt="รถ" referrerpolicy="no-referrer" class="w-full h-full object-cover transition-opacity duration-300" onerror="this.src='https://images.unsplash.com/photo-1549399542-7e3f8b79c341?w=800&auto=format&fit=crop&q=80'">
+              
+              <!-- Angle Category Label Overlay -->
+              <div class="absolute top-3 left-3 px-3 py-1 rounded-lg bg-black/85 backdrop-blur-md text-xs font-semibold text-white border border-white/10 flex items-center gap-1.5">
+                <i data-lucide="camera" class="w-3.5 h-3.5 text-red-500"></i>
+                <span id="modal-current-angle-label">ภายนอกรอบคัน (Exterior)</span>
+              </div>
+
+              <!-- 175-Point Certified Badge -->
+              <div class="absolute bottom-3 right-3 px-2.5 py-1 rounded-md bg-emerald-950/90 text-emerald-300 border border-emerald-500/40 text-[11px] font-medium backdrop-blur-md">
+                ✓ ตรวจสอบ 175 จุดผ่าน A+
+              </div>
+            </div>
+
+            <!-- Angle Switcher Tabs / Thumbnails -->
+            <div>
+              <div class="text-[11px] font-semibold text-slate-400 mb-1.5 flex items-center justify-between">
+                <span>คลิกเลือกดูรูปเจาะลึก 4 มุมตรงรุ่น:</span>
+                <span class="text-red-400 font-mono text-[10px]">[ ภายนอก · ภายใน · ห้องเครื่อง · ท้ายรถ/ตรวจสภาพ ]</span>
+              </div>
+              <div class="grid grid-cols-4 gap-2" id="modal-angle-buttons">
+                <!-- Populated via JS -->
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Column 2: Pricing, Finance vs Cash, & Direct Action Box -->
+          <div class="lg:col-span-5 rounded-2xl bg-[#0E1119] border border-slate-800 p-5 space-y-4">
+            
+            <div>
+              <div class="text-xs text-slate-400">ราคาจำหน่ายเงินสด</div>
+              <div id="modal-price" class="text-3xl font-black font-heading text-white">
+                ฿0
+              </div>
+            </div>
+
+            <!-- CONDITIONAL PRICING BOX: Finance vs Cash Only -->
+            <div id="modal-finance-box" class="space-y-3">
+              <div class="p-3.5 rounded-xl bg-slate-900 border border-emerald-500/40 space-y-1">
+                <div class="flex items-center justify-between text-xs font-semibold">
+                  <span class="text-emerald-400 flex items-center gap-1">
+                    <i data-lucide="credit-card" class="w-3.5 h-3.5"></i>
+                    <span>จัดไฟแนนซ์ได้ (มีบริการผ่อน)</span>
+                  </span>
+                  <span id="modal-down-text" class="text-slate-300 font-mono">ฟรีดาวน์ 0 บาท</span>
+                </div>
+                <div class="flex items-baseline justify-between pt-1">
+                  <span class="text-xs text-slate-400">ผ่อนเริ่มต้น:</span>
+                  <span id="modal-monthly-text" class="text-lg font-bold font-mono text-red-400">
+                    ฿0 / ด.
+                  </span>
+                </div>
+                <div class="text-[10px] text-slate-500">
+                  *คำนวณรวม VAT 7% แล้ว อนุมัติไวใน 1 วันทำการ
+                </div>
+              </div>
+            </div>
+
+            <div id="modal-cash-box" class="hidden space-y-3">
+              <div class="p-3.5 rounded-xl bg-amber-950/40 border border-amber-500/50 space-y-1.5">
+                <div class="flex items-center gap-1.5 text-xs font-bold text-amber-400">
+                  <i data-lucide="alert-circle" class="w-4 h-4"></i>
+                  <span>คันนี้เงื่อนไขรับชำระเงินสด / โอนเต็มจำนวน</span>
+                </div>
+                <p id="modal-cash-note" class="text-[11px] text-amber-200/80 leading-relaxed">
+                  รถปีต่ำกว่าเกณฑ์ไฟแนนซ์ส่วนใหญ่ / ขายสดราคาพิเศษ เล่มพร้อมโอนทันที
+                </p>
+              </div>
+            </div>
+
+            <!-- Quick Specs Snapshot -->
+            <div class="grid grid-cols-2 gap-2 text-xs">
+              <div class="p-2.5 rounded-xl bg-slate-900/60 border border-slate-800">
+                <span class="text-slate-400 text-[11px] block">เลขไมล์แท้:</span>
+                <span id="modal-mileage" class="font-mono font-bold text-white mt-0.5 block">-</span>
+              </div>
+              <div class="p-2.5 rounded-xl bg-slate-900/60 border border-slate-800">
+                <span class="text-slate-400 text-[11px] block">ปีจดทะเบียน:</span>
+                <span id="modal-year" class="font-mono font-bold text-white mt-0.5 block">-</span>
+              </div>
+              <div class="p-2.5 rounded-xl bg-slate-900/60 border border-slate-800">
+                <span class="text-slate-400 text-[11px] block">เครื่องยนต์:</span>
+                <span id="modal-engine" class="font-medium text-white mt-0.5 block truncate">-</span>
+              </div>
+              <div class="p-2.5 rounded-xl bg-slate-900/60 border border-slate-800">
+                <span class="text-slate-400 text-[11px] block">ระบบเกียร์:</span>
+                <span id="modal-gear" class="font-medium text-white mt-0.5 block truncate">-</span>
+              </div>
+            </div>
+
+            <!-- Conversion Action Buttons -->
+            <div class="space-y-2 pt-1">
+              <a id="modal-line-btn" href="#" target="_blank" rel="noopener noreferrer" class="w-full py-3 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-semibold text-xs flex items-center justify-center gap-2 transition-colors shadow-lg shadow-emerald-950/50">
+                <i data-lucide="message-circle" class="w-4 h-4"></i>
+                <span>ติดต่อฝ่ายขายผ่าน LINE (ตอบทันที)</span>
+              </a>
+
+              <button onclick="openTestDriveModalForActiveCar()" class="w-full py-2.5 rounded-xl bg-red-600 hover:bg-red-500 text-white font-semibold text-xs flex items-center justify-center gap-2 transition-colors cursor-pointer">
+                <i data-lucide="calendar" class="w-4 h-4"></i>
+                <span>จองคิวทดลองขับหน้าร้าน</span>
+              </button>
+
+              <button id="modal-calc-btn" onclick="transferActiveCarToCalc()" class="w-full py-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-300 text-xs font-medium border border-slate-700 flex items-center justify-center gap-1.5 cursor-pointer">
+                <i data-lucide="calculator" class="w-3.5 h-3.5 text-red-400"></i>
+                <span>นำคันนี้ไปคำนวณค่างวดละเอียด</span>
+              </button>
+            </div>
+
+          </div>
+
+        </div>
+
+        <!-- 3-Pillar Confidence Certificate -->
+        <div class="p-4 rounded-xl bg-emerald-950/20 border border-emerald-500/30 space-y-2">
+          <div class="flex items-center gap-2 text-emerald-400 font-bold text-xs font-mono uppercase">
+            <i data-lucide="shield-check" class="w-4 h-4"></i>
+            <span>ใบรับประกันความมั่นใจ 3 ประการ (175-Point Confidence Guaranteed)</span>
+          </div>
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 text-xs text-slate-300">
+            <div class="flex items-center gap-2">
+              <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-400 shrink-0"></i>
+              <span>การันตีโครงสร้างไม่เคยชนหนัก/ตัดต่อ 100%</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-400 shrink-0"></i>
+              <span>การันตีไม่มีประวัติน้ำท่วม/จมน้ำ 100%</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-400 shrink-0"></i>
+              <span>การันตีเลขไมล์แท้ เช็กศูนย์ Honda ย้อนหลังได้</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- STRUCTURED POINT-BY-POINT INSPECTION SECTIONS (4 Main Categories) -->
+        <div class="space-y-4 pt-2">
+          <div class="flex items-center justify-between border-b border-slate-800 pb-2">
+            <h4 class="text-xs font-bold text-white uppercase tracking-wider font-mono flex items-center gap-2">
+              <i data-lucide="clipboard-check" class="w-4 h-4 text-red-500"></i>
+              <span>ผลการตรวจเช็กสภาพเฉพาะจุดอย่างละเอียด (Specific Point-by-Point Inspection)</span>
+            </h4>
+            <span class="text-[11px] text-slate-400">ตรวจโดยวิศวกรผู้เชี่ยวชาญ Honda</span>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs">
+            
+            <!-- Card 1: Exterior -->
+            <div class="p-4 rounded-xl bg-[#0E1119] border border-slate-800 space-y-2">
+              <div class="flex items-center gap-2 text-white font-bold text-sm">
+                <span class="text-lg">🚗</span>
+                <span>สภาพภายนอกและตัวถัง (Exterior & Frame)</span>
+              </div>
+              <p id="modal-desc-exterior" class="text-slate-300 leading-relaxed text-xs">
+                -
+              </p>
+            </div>
+
+            <!-- Card 2: Interior -->
+            <div class="p-4 rounded-xl bg-[#0E1119] border border-slate-800 space-y-2">
+              <div class="flex items-center gap-2 text-white font-bold text-sm">
+                <span class="text-lg">💺</span>
+                <span>สภาพภายในห้องโดยสาร (Interior & Cockpit)</span>
+              </div>
+              <p id="modal-desc-interior" class="text-slate-300 leading-relaxed text-xs">
+                -
+              </p>
+            </div>
+
+            <!-- Card 3: Engine -->
+            <div class="p-4 rounded-xl bg-[#0E1119] border border-slate-800 space-y-2">
+              <div class="flex items-center gap-2 text-white font-bold text-sm">
+                <span class="text-lg">⚙️</span>
+                <span>สภาพเครื่องยนต์และกลไก (Engine Bay & Mechanics)</span>
+              </div>
+              <p id="modal-desc-engine" class="text-slate-300 leading-relaxed text-xs">
+                -
+              </p>
+            </div>
+
+            <!-- Card 4: Chassis / Guarantee -->
+            <div class="p-4 rounded-xl bg-[#0E1119] border border-slate-800 space-y-2">
+              <div class="flex items-center gap-2 text-white font-bold text-sm">
+                <span class="text-lg">🛡️</span>
+                <span>การันตีโครงสร้างและประวัติศูนย์ (Chassis Guarantee)</span>
+              </div>
+              <p id="modal-desc-chassis" class="text-slate-300 leading-relaxed text-xs">
+                -
+              </p>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ============================================================== -->
+  <!-- 6. TEST DRIVE BOOKING MODAL                                    -->
+  <!-- ============================================================== -->
+  <div id="test-drive-modal" class="hidden fixed inset-0 z-50 overflow-y-auto bg-black/85 backdrop-blur-md flex items-center justify-center p-3 sm:p-4">
+    <div class="relative w-full max-w-lg bg-[#141824] border border-[#232A3B] rounded-2xl shadow-2xl overflow-hidden max-h-[92vh] flex flex-col my-auto">
+      <div class="px-5 py-4 border-b border-slate-800 flex items-center justify-between bg-[#11141E]">
+        <h3 class="text-base font-bold text-white font-heading">
+          จองคิวทดลองขับฟรี (Book Test Drive)
+        </h3>
+        <button onclick="closeTestDriveModal()" class="p-1 text-slate-400 hover:text-white cursor-pointer">
+          <i data-lucide="x" class="w-5 h-5"></i>
+        </button>
+      </div>
+
+      <form onsubmit="handleTestDriveSubmit(event)" class="p-5 sm:p-6 space-y-4 text-xs">
+        <div>
+          <label class="block font-semibold text-slate-300 mb-1">รถที่สนใจทดลองขับ:</label>
+          <input type="text" id="td-car-name" readonly class="w-full bg-[#0B0D13] border border-slate-700 rounded-xl px-3.5 py-2.5 text-white font-bold">
+        </div>
+
+        <div class="grid grid-cols-2 gap-3">
+          <div>
+            <label class="block font-semibold text-slate-300 mb-1">วันที่สะดวก:</label>
+            <input type="date" id="td-date" required class="w-full bg-[#0B0D13] border border-slate-700 rounded-xl px-3 py-2 text-white">
+          </div>
+          <div>
+            <label class="block font-semibold text-slate-300 mb-1">เวลา:</label>
+            <select id="td-time" class="w-full bg-[#0B0D13] border border-slate-700 rounded-xl px-3 py-2 text-white">
+              <option>10:00 - 11:30</option>
+              <option>13:30 - 15:00</option>
+              <option>15:30 - 17:00</option>
+            </select>
+          </div>
+        </div>
+
+        <div>
+          <label class="block font-semibold text-slate-300 mb-1">ชื่อ-นามสกุลของคุณ:</label>
+          <input type="text" id="td-name" required placeholder="เช่น คุณธนกร" class="w-full bg-[#0B0D13] border border-slate-700 rounded-xl px-3.5 py-2 text-white">
+        </div>
+
+        <div>
+          <label class="block font-semibold text-slate-300 mb-1">เบอร์โทรศัพท์ติดต่อ:</label>
+          <input type="tel" id="td-phone" required placeholder="08x-xxx-xxxx" class="w-full bg-[#0B0D13] border border-slate-700 rounded-xl px-3.5 py-2 text-white">
+        </div>
+
+        <div class="pt-2">
+          <button type="submit" class="w-full py-3 rounded-xl bg-red-600 hover:bg-red-500 text-white font-semibold text-xs transition-colors cursor-pointer">
+            ยืนยันการจองคิวทดลองขับ
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- ============================================================== -->
+  <!-- 7. FOOTER                                                      -->
+  <!-- ============================================================== -->
+  <footer class="bg-[#090B10] border-t border-slate-800 text-slate-400 text-xs py-10 mt-auto">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6">
+      <div class="flex flex-col md:flex-row items-center justify-between gap-4">
+        <div class="flex items-center gap-2.5">
+          <div class="w-7 h-7 rounded-lg bg-red-600 text-white font-heading font-black flex items-center justify-center">
+            H
+          </div>
+          <span class="font-heading font-black text-white text-base">
+            CIVIC<span class="text-red-500">HUB</span> THAILAND
+          </span>
+          <span class="text-slate-500 text-xs">| ถนนกาญจนาภิเษก-บางแค กรุงเทพฯ</span>
+        </div>
+
+        <div class="flex items-center gap-4 text-xs">
+          <span>โทร: 081-888-2484</span>
+          <span>·</span>
+          <span>LINE: @civichubth</span>
+          <span>·</span>
+          <span>เปิดบริการทุกวัน 09:00 - 18:30 น.</span>
+        </div>
+      </div>
+
+      <div class="pt-4 border-t border-slate-800/60 text-[11px] text-slate-500 text-center">
+        © 2026 Civic Hub Thailand. สงวนลิขสิทธิ์ทั้งหมด. รถทุกคันรับประกันไม่ชนหนัก ไม่น้ำท่วม ไมล์แท้ 100%
+      </div>
+    </div>
+  </footer>
+
+  <!-- ============================================================== -->
+  <!-- 8. MOBILE-FIRST STICKY FOOTER BAR (Fixed at Bottom)           -->
+  <!-- ============================================================== -->
+  <div class="md:hidden fixed bottom-0 left-0 right-0 z-40 bg-[#0E1119]/95 backdrop-blur-md border-t border-slate-800 p-2.5 px-4 flex items-center justify-between gap-3 shadow-2xl">
+    <a href="tel:0818882484" class="flex-1 py-2.5 rounded-xl bg-slate-800 text-white text-xs font-semibold flex items-center justify-center gap-2 border border-slate-700">
+      <i data-lucide="phone" class="w-3.5 h-3.5 text-red-500"></i>
+      <span>โทรหาเต็นท์</span>
+    </a>
+    <a href="https://line.me" target="_blank" rel="noopener noreferrer" class="flex-1 py-2.5 rounded-xl bg-emerald-600 text-white text-xs font-semibold flex items-center justify-center gap-2 shadow-md shadow-emerald-950/60">
+      <i data-lucide="message-circle" class="w-4 h-4"></i>
+      <span>แชต LINE OA</span>
+    </a>
+  </div>
+
+  <!-- ============================================================== -->
+  <!-- 9. JAVASCRIPT APPLICATION LOGIC                                -->
+  <!-- ============================================================== -->
+  <script>
+    // Exact realistic mock dataset specified by user with accurate specs & Wikimedia images
+    const carsData = [
+      {
+        id: 1,
+        gen: "FD",
+        title: "Honda Civic FD 1.8 S MT ปี 2008 (ไฟท้ายโดนัท สเต็ปซิ่ง)",
+        year: 2008,
+        price: 189000,
+        paymentType: "cash", // ขายสดเท่านั้น
+        status: "available",
+        conditionStyle: "tuned",
+        engineCode: "R18A 1.8L i-VTEC (140 แรงม้า)",
+        gearbox: "เกียร์ธรรมดา 5 จังหวะ (5MT)",
+        mileage: "185,400 กม.",
+        color: "ขาว Taffeta White",
+        financeDetails: {
+          note: "รถปีต่ำกว่าเกณฑ์ไฟแนนซ์ส่วนใหญ่ / ขายสดราคาพิเศษ เล่มพร้อมโอนทันที"
+        },
+        images: {
+          exterior: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/2006-2008_Honda_Civic_sedan_--_03-21-2012.JPG/800px-2006-2008_Honda_Civic_sedan_--_03-21-2012.JPG",
+          interior: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/2006_Honda_Civic_EX_Sedan_Dashboard.jpg/800px-2006_Honda_Civic_EX_Sedan_Dashboard.jpg",
+          engine: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/Honda_R18A_engine_01.JPG/800px-Honda_R18A_engine_01.JPG",
+          extra: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Honda_Civic_FD_rear.jpg/800px-Honda_Civic_FD_rear.jpg"
+        },
+        specs: {
+          exterior: "ฝากระโปรงหน้าคาร์บอนแท้ลายสอง ท่อไอเสียสแตนเลสทรง JS Racing ปลายไทเทเนียม ล้อ Enkei RPF1 ขอบ 17 ยางปี 2024 ไฟท้ายโดนัทแท้",
+          interior: "มาตรวัด Multiplex Meter ดิจิทัลสองชั้นทำงานสมบูรณ์ หัวเกียร์ Type R อลูมิเนียม แอร์เย็น เบาะผ้ากำมะหยี่เดิมไม่มีขาด",
+          engine: "เครื่อง R18A ฟิตติ้งสมบูรณ์ ไม่มีคราบน้ำมันซึม ระบบ VTEC เปิดปกติ กรองเปลือย HKS ท่อไอดีลื่นไหล ของเหลวเพิ่งเปลี่ยนถ่ายทั้งระบบ",
+          chassisGuarantee: "โครงสร้างคานหน้า-หลังเดิม น็อตแก้มข้างไม่เคยขยับ ไม่เคยติดแก๊ส ไม่เคยชนหนักหรือจมน้ำ 100%"
+        }
+      },
+      {
+        id: 2,
+        gen: "FD",
+        title: "Honda Civic FD 1.8 E AT ปี 2011 (โฉมไฟท้ายแปดเหลี่ยม ตัวท็อปเบาะหนัง)",
+        year: 2011,
+        price: 269000,
+        paymentType: "finance", // จัดไฟแนนซ์ได้
+        status: "available",
+        conditionStyle: "stock",
+        engineCode: "R18A 1.8L i-VTEC (140 แรงม้า รองรับ E20)",
+        gearbox: "อัตโนมัติ 5 สปีด (5AT)",
+        mileage: "142,000 กม.",
+        color: "เทาโพลิช Polished Metal Metallic",
+        financeDetails: {
+          downPayment: 0,
+          monthlyEstimate: "5,400 บ./ด.",
+          termMonths: 72
+        },
+        images: {
+          exterior: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/2009-2011_Honda_Civic_sedan_--_03-21-2012_2.JPG/800px-2009-2011_Honda_Civic_sedan_--_03-21-2012_2.JPG",
+          interior: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/2006_Honda_Civic_EX_Sedan_Dashboard.jpg/800px-2006_Honda_Civic_EX_Sedan_Dashboard.jpg",
+          engine: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/Honda_R18A_engine_01.JPG/800px-Honda_R18A_engine_01.JPG",
+          extra: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/2009-2011_Honda_Civic_sedan_--_03-21-2012_1.JPG/800px-2009-2011_Honda_Civic_sedan_--_03-21-2012_1.JPG"
+        },
+        specs: {
+          exterior: "ไฟท้ายแปดเหลี่ยม Minorchange แท้เดิมโรงงาน ล้ออัลลอยแท้ 16 นิ้ว ยาง Michelin Primacy 4 สีเดิมบางรอบคัน",
+          interior: "เบาะหนังแท้สีเบจโรงงาน พวงมาลัยมัลติฟังก์ชันพร้อม Cruise Control แอร์ออโต้ดิจิทัล กระจกมองข้างพับไฟฟ้า",
+          engine: "เครื่องยนต์แห้งสนิท สภาพเดิมสนิทจากโรงงาน ไม่เคยแต่งซิ่งหรือปรับจูนกล่อง บุ๊คเซอร์วิสครบ กุญแจรีโมท 2 ดอก",
+          chassisGuarantee: "รถบ้านมือเดียว เช็กประวัติศูนย์ฮอนด้าได้ การันตีไม่มีอุบัติเหตุพลิกคว่ำหรือตัดต่อตัวถัง"
+        }
+      },
+      {
+        id: 3,
+        gen: "FB",
+        title: "Honda Civic FB 1.8 E Navi ปี 2014 (รถบ้านมือเดียว ออปชันครบ)",
+        year: 2014,
+        price: 349000,
+        paymentType: "finance",
+        status: "available",
+        conditionStyle: "stock",
+        engineCode: "R18Z1 1.8L i-VTEC (141 แรงม้า รองรับ E85)",
+        gearbox: "อัตโนมัติ 5 สปีด (5AT)",
+        mileage: "118,200 กม.",
+        color: "ดำ Crystal Black Pearl",
+        financeDetails: {
+          downPayment: 9000,
+          monthlyEstimate: "6,800 บ./ด.",
+          termMonths: 72
+        },
+        images: {
+          exterior: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/2012_Honda_Civic_Sedan_--_06-28-2012.JPG/800px-2012_Honda_Civic_Sedan_--_06-28-2012.JPG",
+          interior: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/2012_Honda_Civic_LX_sedan_interior_instrument_panel.JPG/800px-2012_Honda_Civic_LX_sedan_interior_instrument_panel.JPG",
+          engine: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/Honda_R18A_engine_01.JPG/800px-Honda_R18A_engine_01.JPG",
+          extra: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/2012_Honda_Civic_Sedan_Rear_--_06-28-2012.JPG/800px-2012_Honda_Civic_Sedan_Rear_--_06-28-2012.JPG"
+        },
+        specs: {
+          exterior: "ไฟหน้า Projector พร้อมไฟตัดหมอก ล้ออัลลอยแท้ 16 นิ้ว ดิสก์เบรก 4 ล้อ พร้อมระบบเบรก ABS/EBD",
+          interior: "หน้าจอ i-MID แสดงผลอัจฉริยะ จอเนวิเกเตอร์สัมผัส กล้องส่องภาพด้านหลัง เบาะคนขับปรับไฟฟ้า 8 ทิศทาง ปุ่ม ECON ขับประหยัด",
+          engine: "เครื่อง R18Z1 รองรับน้ำมัน E85 ประหยัดมาก สภาพเครื่องเดินนิ่ง เกียร์เปลี่ยนสมูทไร้รอยต่อ ช่วงล่างนุ่มเงียบ",
+          chassisGuarantee: "โครงสร้างตัวถังปลอดภัย 100% ตะเข็บซอกประตูเดิม รอยอาร์กโรงงานอยู่ครบทุกจุด"
+        }
+      },
+      {
+        id: 4,
+        gen: "FC",
+        title: "Honda Civic FC 1.5 Turbo RS Minorchange ปี 2019 (Honda SENSING ตัวท็อปสุด)",
+        year: 2019,
+        price: 689000,
+        paymentType: "finance",
+        status: "available",
+        conditionStyle: "stock",
+        engineCode: "L15B7 1.5L DOHC VTEC TURBO (173 แรงม้า แรงบิด 220 นิวตันเมตร)",
+        gearbox: "เกียร์อัตโนมัติ CVT พร้อม Paddle Shift",
+        mileage: "78,500 กม.",
+        color: "น้ำเงิน Brilliant Sporty Blue Metallic",
+        financeDetails: {
+          downPayment: 0,
+          monthlyEstimate: "11,800 บ./ด.",
+          termMonths: 72
+        },
+        images: {
+          exterior: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/2019_Honda_Civic_Sedan_front_NYIAS_2019.jpg/800px-2019_Honda_Civic_Sedan_front_NYIAS_2019.jpg",
+          interior: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/2016_Honda_Civic_Touring_dashboard.jpg/800px-2016_Honda_Civic_Touring_dashboard.jpg",
+          engine: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f0/Honda_L15B7_engine.jpg/800px-Honda_L15B7_engine.jpg",
+          extra: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/2019_Honda_Civic_Sedan_rear_NYIAS_2019.jpg/800px-2019_Honda_Civic_Sedan_rear_NYIAS_2019.jpg"
+        },
+        specs: {
+          exterior: "กันชนหน้าสไตล์สปอร์ต RS ไฟหน้า Full LED พร้อม Daytime Running Lights เสาอากาศครีบฉลาม ท่อไอเสียคู่ สปอยเลอร์หลังพร้อมไฟเบรก LED ล้อ RS 17 นิ้วกรมดำ",
+          interior: "เบาะหนังดำเดินด้ายแดงสไตล์ RS แป้นคันเร่งสปอร์ต จอ 7 นิ้ว รองรับ Apple CarPlay/Android Auto ระบบ Honda LaneWatch กล้องส่องภาพมุมอับ",
+          engine: "L15B7 VTEC Turbo สมรรถนะแรง อัตราเร่ง 0-100 กม./ชม. ใน 8.7 วินาที เซอร์วิสตามระยะศูนย์ตลอด ประวัติครบ",
+          chassisGuarantee: "ติดตั้งแพ็กเกจความปลอดภัย Honda SENSING (ACC with LSF, CMBS, LKAS, RDM) ตัวถังเดิมสนิท ไร้การชนหนัก"
+        }
+      },
+      {
+        id: 5,
+        gen: "FK",
+        title: "Honda Civic FK 1.5 Turbo Hatchback 5 ประตู ปี 2018 (หล่อซิ่ง ล้อแท้)",
+        year: 2018,
+        price: 699000,
+        paymentType: "finance",
+        status: "available",
+        conditionStyle: "tuned",
+        engineCode: "L15B7 1.5L VTEC TURBO (รีแม็พสเต็ป 1 กล่อง DataTec 210 แรงม้า)",
+        gearbox: "เกียร์อัตโนมัติ CVT",
+        mileage: "89,000 กม.",
+        color: "เทาโมเดิร์นสตีล Modern Steel Metallic",
+        financeDetails: {
+          downPayment: 19000,
+          monthlyEstimate: "12,200 บ./ด.",
+          termMonths: 72
+        },
+        images: {
+          exterior: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/2017_Honda_Civic_EX_hatchback_front.jpg/800px-2017_Honda_Civic_EX_hatchback_front.jpg",
+          interior: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/2016_Honda_Civic_Touring_dashboard.jpg/800px-2016_Honda_Civic_Touring_dashboard.jpg",
+          engine: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f0/Honda_L15B7_engine.jpg/800px-Honda_L15B7_engine.jpg",
+          extra: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/2017_Honda_Civic_EX_hatchback_rear.jpg/800px-2017_Honda_Civic_EX_hatchback_rear.jpg"
+        },
+        specs: {
+          exterior: "บอดี้แฮตช์แบ็ก 5 ประตู สไตล์สายซิ่ง ล้อ RAYS Volk Racing TE37 ขอบ 18 นิ้ว รัดยาง Michelin Pilot Sport 5 สปริงโหลด Eibach ทรงสวยพร้อมขับ",
+          interior: "ภายในคุมโทนดำสปอร์ต พวงมาลัยมัลติฟังก์ชัน เบาะปรับไฟฟ้า แอร์ Dual Zone เย็นฉ่ำ จอสัมผัสเชื่อมต่อมือถือครบ",
+          engine: "เครื่อง L15B7 สมบูรณ์ บูสต์นิ่ง ติดตั้ง Blow Off Valve เสียงกระเส่า กรองอากาศ K&N ถ่ายน้ำมันเกียร์ HCF-2 สม่ำเสมอ",
+          chassisGuarantee: "โครงสร้างตัวถังผ่านการตรวจ 175 จุด น็อตยึดฝาท้ายเดิมไม่เคยถอด ประกันโครงสร้างไม่มีตัดต่อหรือจมน้ำ"
+        }
+      },
+      {
+        id: 6,
+        gen: "FE",
+        title: "Honda Civic FE 1.5 Turbo EL+ ปี 2022 (โฉมปัจจุบัน สภาพเสมือนป้ายแดง)",
+        year: 2022,
+        price: 799000,
+        paymentType: "finance",
+        status: "available",
+        conditionStyle: "stock",
+        engineCode: "L15BG 1.5L VTEC TURBO (178 แรงม้า แรงบิด 240 นิวตันเมตร รองรับ E85)",
+        gearbox: "อัตโนมัติ CVT เจเนอเรชันใหม่",
+        mileage: "34,000 กม.",
+        color: "ขาวมุก Platinum White Pearl",
+        financeDetails: {
+          downPayment: 0,
+          monthlyEstimate: "13,500 บ./ด.",
+          termMonths: 84
+        },
+        images: {
+          exterior: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/2022_Honda_Civic_Touring_Sedan_in_Morning_Mist_Metallic%2C_Front_Right%2C_10-25-2021.jpg/800px-2022_Honda_Civic_Touring_Sedan_in_Morning_Mist_Metallic%2C_Front_Right%2C_10-25-2021.jpg",
+          interior: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/2022_Honda_Civic_Touring_interior.jpg/800px-2022_Honda_Civic_Touring_interior.jpg",
+          engine: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f0/Honda_L15B7_engine.jpg/800px-Honda_L15B7_engine.jpg",
+          extra: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/2022_Honda_Civic_Touring_Sedan_in_Morning_Mist_Metallic%2C_Rear_Left%2C_10-25-2021.jpg/800px-2022_Honda_Civic_Touring_Sedan_in_Morning_Mist_Metallic%2C_Rear_Left%2C_10-25-2021.jpg"
+        },
+        specs: {
+          exterior: "ดีไซน์หรูหราสไตล์มินิมอล ไฟหน้า Full LED พร้อมระบบเปิด-ปิดไฟหน้าอัตโนมัติ ล้ออัลลอยแท้ 16 นิ้ว ยางติดรถสภาพดอกเต็ม ยางอะไหล่ไม่เคยลงดิน",
+          interior: "ช่องแอร์ดีไซน์รังผึ้ง Metal Honeycomb คลาสสิก เบาะหนังแท้ปรับไฟฟ้า มาตรวัด TFT จอสัมผัส Advance Touch รองรับ Apple CarPlay แบบไร้สาย",
+          engine: "เครื่องยนต์ L15BG รุ่นปรับปรุงใหม่ แรงและตอบสนองไวกว่าเดิม อัตราประหยัดน้ำมันเฉลี่ย 17.2 กม./ลิตร วารันตีศูนย์ฮอนด้ายังเหลือ",
+          chassisGuarantee: "รถมือเดียวออกห้าง เช็กประวัติศูนย์ทุกระยะ 10,000 กม. น็อตตัวถังเดิมสนิททุกชิ้น สีเดิมโรงงานทั้งคัน ไร้รอยขีดข่วน"
+        }
+      }
+    ];
+
+    // Filter & App State
+    let currentPaymentType = 'ALL'; // 'ALL' | 'finance' | 'cash'
+    let currentGeneration = 'ALL';   // 'ALL' | 'FD' | 'FB' | 'FC' | 'FK' | 'FE'
+    let currentCondition = 'ALL';    // 'ALL' | 'stock' | 'tuned'
+    let currentSort = 'PRICE_ASC';
+    let activeCar = null;
+    let activeAngle = 'exterior';
+
+    // Loan Calc State
+    let calcPrice = 689000;
+    let calcDownPct = 10;
+    let calcTermMonths = 72;
+    const calcAnnualRate = 3.25;
+
+    // Format Baht
+    function formatMoney(amount) {
+      return '฿' + Math.round(amount).toLocaleString('th-TH');
+    }
+
+    // Thai Loan Formula with 7% VAT
+    function calcMonthlyInstallment(carPrice, downPct, termMonths, rate = 3.25) {
+      const downAmount = (carPrice * downPct) / 100;
+      const principal = Math.max(0, carPrice - downAmount);
+      const years = termMonths / 12;
+      const totalInterest = principal * (rate / 100) * years;
+      const totalPreVat = principal + totalInterest;
+      const monthlyPreVat = termMonths > 0 ? totalPreVat / termMonths : 0;
+      const actualMonthly = monthlyPreVat * 1.07; // Add 7% Thai VAT
+      return {
+        principal,
+        totalInterest,
+        monthlyPreVat,
+        actualMonthly,
+        vatMonthly: actualMonthly - monthlyPreVat,
+        downAmount
+      };
+    }
+
+    // Layer 1 Filter: Payment Type
+    function setPaymentTypeFilter(type) {
+      currentPaymentType = type;
+      
+      document.querySelectorAll('.pay-tab').forEach(tab => {
+        tab.className = 'pay-tab py-2.5 px-4 rounded-xl text-xs sm:text-sm font-semibold transition-all flex items-center justify-center gap-2 bg-[#0B0D13] text-slate-300 hover:text-white border border-slate-800 cursor-pointer';
+      });
+
+      const activeTab = document.getElementById('pay-' + type);
+      if (activeTab) {
+        if (type === 'ALL') {
+          activeTab.className = 'pay-tab py-2.5 px-4 rounded-xl text-xs sm:text-sm font-semibold transition-all flex items-center justify-center gap-2 bg-red-600 text-white shadow-md shadow-red-950 border border-red-500 cursor-pointer';
+        } else if (type === 'finance') {
+          activeTab.className = 'pay-tab py-2.5 px-4 rounded-xl text-xs sm:text-sm font-semibold transition-all flex items-center justify-center gap-2 bg-emerald-950/80 text-emerald-300 shadow-md shadow-emerald-950 border border-emerald-500 cursor-pointer';
+        } else {
+          activeTab.className = 'pay-tab py-2.5 px-4 rounded-xl text-xs sm:text-sm font-semibold transition-all flex items-center justify-center gap-2 bg-amber-950/80 text-amber-300 shadow-md shadow-amber-950 border border-amber-500 cursor-pointer';
+        }
+      }
+
+      renderCars();
+    }
+
+    // Layer 2 Filter: Generation
+    function handleSelectGeneration(gen) {
+      currentGeneration = gen;
+      
+      document.querySelectorAll('.gen-tab').forEach(tab => {
+        tab.className = 'gen-tab px-3.5 py-2 rounded-xl text-xs sm:text-sm font-semibold transition-all bg-slate-900 text-slate-300 hover:text-white border border-slate-800 cursor-pointer';
+      });
+
+      const activeTab = document.getElementById('tab-' + gen);
+      if (activeTab) {
+        activeTab.className = 'gen-tab px-3.5 py-2 rounded-xl text-xs sm:text-sm font-semibold transition-all bg-red-600 text-white shadow-md shadow-red-950 cursor-pointer';
+      }
+
+      renderCars();
+
+      const invSec = document.getElementById('inventory-section');
+      if (invSec) {
+        invSec.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+
+    // Sub-filter: Condition (Stock vs Tuned)
+    function setConditionFilter(cond) {
+      currentCondition = cond;
+      document.querySelectorAll('.cond-btn').forEach(btn => {
+        btn.className = 'cond-btn px-2.5 py-1 rounded-lg font-medium text-slate-400 hover:text-white cursor-pointer';
+      });
+      const activeBtn = document.getElementById('cond-' + cond);
+      if (activeBtn) {
+        activeBtn.className = 'cond-btn px-2.5 py-1 rounded-lg font-medium bg-slate-800 text-white cursor-pointer';
+      }
+      renderCars();
+    }
+
+    function setSortOrder(val) {
+      currentSort = val;
+      renderCars();
+    }
+
+    function resetAllFilters() {
+      currentPaymentType = 'ALL';
+      currentGeneration = 'ALL';
+      currentCondition = 'ALL';
+      currentSort = 'PRICE_ASC';
+      document.getElementById('sort-select').value = 'PRICE_ASC';
+
+      setPaymentTypeFilter('ALL');
+      handleSelectGeneration('ALL');
+      setConditionFilter('ALL');
+    }
+
+    // Render Car Cards
+    function renderCars() {
+      const container = document.getElementById('cars-grid');
+      const emptyState = document.getElementById('empty-state');
+      const countDisplay = document.getElementById('car-count-display');
+      const filterSummary = document.getElementById('active-filter-text');
+
+      let filtered = carsData.filter(car => {
+        // Payment Type Filter
+        if (currentPaymentType !== 'ALL' && car.paymentType !== currentPaymentType) return false;
+        // Generation Filter
+        if (currentGeneration !== 'ALL' && car.gen !== currentGeneration) return false;
+        // Condition Filter
+        if (currentCondition !== 'ALL' && car.conditionStyle !== currentCondition) return false;
+
+        return true;
+      });
+
+      // Sorting
+      filtered.sort((a, b) => {
+        if (currentSort === 'PRICE_ASC') return a.price - b.price;
+        if (currentSort === 'PRICE_DESC') return b.price - a.price;
+        if (currentSort === 'YEAR_DESC') return b.year - a.year;
+        return 0;
+      });
+
+      countDisplay.textContent = filtered.length;
+
+      // Update Filter Text description
+      let summaryText = [];
+      if (currentPaymentType === 'finance') summaryText.push('เฉพาะรถจัดไฟแนนซ์ได้');
+      if (currentPaymentType === 'cash') summaryText.push('เฉพาะรถขายสดเท่านั้น');
+      if (currentGeneration !== 'ALL') summaryText.push(`โฉม Civic ${currentGeneration}`);
+      if (currentCondition === 'stock') summaryText.push('สเปกเดิมโรงงาน (Stock)');
+      if (currentCondition === 'tuned') summaryText.push('แต่งซิ่ง (Tuned)');
+      filterSummary.textContent = summaryText.length > 0 ? `(${summaryText.join(' · ')})` : '';
+
+      if (filtered.length === 0) {
+        container.innerHTML = '';
+        emptyState.classList.remove('hidden');
+        return;
+      }
+
+      emptyState.classList.add('hidden');
+
+      container.innerHTML = filtered.map(car => {
+        const isCashOnly = car.paymentType === 'cash';
+        const estLoan = !isCashOnly ? calcMonthlyInstallment(car.price, car.financeDetails?.downPayment === 0 ? 0 : 10, car.financeDetails?.termMonths || 72) : null;
+
+        return `
+          <div class="group rounded-2xl bg-[#141824] border ${isCashOnly ? 'border-amber-500/50 hover:border-amber-400' : 'border-[#232A3B] hover:border-slate-700'} transition-all duration-300 hover:shadow-2xl flex flex-col overflow-hidden">
+            
+            <!-- Image Frame -->
+            <div class="relative aspect-[16/10] overflow-hidden bg-black">
+              <img src="${car.images.exterior}" alt="${car.title}" referrerpolicy="no-referrer" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ease-out" onerror="this.src='https://images.unsplash.com/photo-1549399542-7e3f8b79c341?w=800&auto=format&fit=crop&q=80'">
+              
+              <!-- Badges Left -->
+              <div class="absolute top-3 left-3 flex items-center gap-1.5 pointer-events-none">
+                <span class="px-2.5 py-1 rounded bg-black/85 backdrop-blur-md text-white font-heading font-black text-xs border border-white/10 tracking-wider">
+                  [${car.gen}]
+                </span>
+                <span class="px-2 py-0.5 rounded text-[11px] font-semibold ${car.conditionStyle === 'tuned' ? 'bg-red-950/90 text-red-300 border border-red-500/40' : 'bg-slate-900/90 text-slate-300 border border-slate-700'}">
+                  ${car.conditionStyle === 'tuned' ? 'Street Tuned' : 'OEM สเปกเดิม'}
+                </span>
+              </div>
+
+              <!-- Payment Type Badge Right -->
+              <div class="absolute top-3 right-3 pointer-events-none">
+                ${isCashOnly 
+                  ? `<span class="px-2.5 py-1 rounded-full bg-amber-500/20 text-amber-300 text-xs font-bold backdrop-blur-md border border-amber-500/60 shadow-lg flex items-center gap-1">
+                      <span>🟡 ตัดสดเท่านั้น / Cash Only</span>
+                    </span>`
+                  : `<span class="px-2.5 py-1 rounded-full bg-emerald-500/20 text-emerald-300 text-xs font-bold backdrop-blur-md border border-emerald-500/60 shadow-lg flex items-center gap-1">
+                      <span>🟢 จัดไฟแนนซ์ได้</span>
+                    </span>`
+                }
+              </div>
+
+              <!-- Bottom Overlay -->
+              <div class="absolute bottom-2.5 left-3 right-3 flex items-center justify-between text-[11px] text-slate-300 pointer-events-none">
+                <span class="bg-black/75 px-2 py-0.5 rounded backdrop-blur-sm">
+                  ✓ ตรวจเช็ก 175 จุด
+                </span>
+                <span class="bg-black/75 px-2 py-0.5 rounded backdrop-blur-sm font-mono">
+                  ${car.mileage}
+                </span>
+              </div>
+            </div>
+
+            <!-- Card Body -->
+            <div class="p-5 flex-1 flex flex-col justify-between space-y-4">
+              <div>
+                <h3 class="font-heading font-bold text-base text-white group-hover:text-red-400 transition-colors line-clamp-1">
+                  ${car.title}
+                </h3>
+                <p class="text-xs text-slate-400 mt-1 line-clamp-1">
+                  ${car.specs.exterior}
+                </p>
+
+                <!-- Spec Mini Grid -->
+                <div class="grid grid-cols-3 gap-2 mt-3 py-2.5 border-y border-slate-800 text-[11px]">
+                  <div>
+                    <span class="text-slate-400 block">ปี ค.ศ.</span>
+                    <span class="font-mono font-bold text-slate-200">${car.year}</span>
+                  </div>
+                  <div>
+                    <span class="text-slate-400 block">ระบบเกียร์</span>
+                    <span class="font-medium text-slate-200 truncate block">${car.gearbox.split(' ')[0]}</span>
+                  </div>
+                  <div>
+                    <span class="text-slate-400 block">เครื่องยนต์</span>
+                    <span class="font-mono font-bold text-red-400 truncate block">${car.engineCode.split(' ')[0]}</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Price & Installment Tag -->
+              <div class="pt-1 border-t border-slate-800/80">
+                <div class="flex items-baseline justify-between mb-3">
+                  <div>
+                    <span class="text-[10px] text-slate-400 block">ราคาเงินสดพิเศษ</span>
+                    <span class="text-xl sm:text-2xl font-black font-heading text-white">
+                      ${formatMoney(car.price)}
+                    </span>
+                  </div>
+                  
+                  <div class="text-right">
+                    ${!isCashOnly 
+                      ? `<span class="text-[10px] text-slate-400 block">ผ่อนประมาณการ (${car.financeDetails?.termMonths || 72} งวด)</span>
+                         <span class="text-xs sm:text-sm font-bold font-mono text-emerald-400">
+                           ${car.financeDetails?.monthlyEstimate || `~${formatMoney(estLoan.actualMonthly)}/ด.`}
+                         </span>`
+                      : `<span class="text-[10px] text-amber-400 block">งดจัดไฟแนนซ์</span>
+                         <span class="text-xs font-bold text-amber-300">
+                           ตัดสดเท่านั้น เอกสารพร้อมโอน
+                         </span>`
+                    }
+                  </div>
+                </div>
+
+                <!-- Actions -->
+                <div class="grid grid-cols-2 gap-2">
+                  <button onclick="openCarDetail(${car.id})" class="py-2.5 px-3 rounded-xl bg-slate-800 hover:bg-slate-700 text-white text-xs font-semibold flex items-center justify-center gap-1.5 transition-colors cursor-pointer border border-slate-700">
+                    <i data-lucide="eye" class="w-3.5 h-3.5 text-slate-300"></i>
+                    <span>ดูสเปก & 4 มุม</span>
+                  </button>
+
+                  ${!isCashOnly 
+                    ? `<button onclick="quickCalculateForCar(${car.id})" class="py-2.5 px-3 rounded-xl bg-red-600 hover:bg-red-500 text-white text-xs font-semibold flex items-center justify-center gap-1.5 transition-colors cursor-pointer">
+                        <i data-lucide="calculator" class="w-3.5 h-3.5"></i>
+                        <span>คำนวณค่างวด</span>
+                      </button>`
+                    : `<button onclick="openCarDetail(${car.id})" class="py-2.5 px-3 rounded-xl bg-amber-600 hover:bg-amber-500 text-white text-xs font-semibold flex items-center justify-center gap-1.5 transition-colors cursor-pointer">
+                        <i data-lucide="tag" class="w-3.5 h-3.5"></i>
+                        <span>สอบถามจบสด</span>
+                      </button>`
+                  }
+                </div>
+              </div>
+
+            </div>
+          </div>
+        `;
+      }).join('');
+
+      if (window.lucide) window.lucide.createIcons();
+    }
+
+    // Modal: Open Car Detail with Multi-Angle Gallery & Specific Descriptions
+    function openCarDetail(carId) {
+      const car = carsData.find(c => c.id === carId);
+      if (!car) return;
+      activeCar = car;
+      activeAngle = 'exterior';
+
+      document.getElementById('modal-gen-badge').textContent = `CIVIC ${car.gen}`;
+      document.getElementById('modal-title').textContent = car.title;
+      document.getElementById('modal-price').textContent = formatMoney(car.price);
+      document.getElementById('modal-mileage').textContent = car.mileage;
+      document.getElementById('modal-year').textContent = `ปี ${car.year}`;
+      document.getElementById('modal-engine').textContent = car.engineCode;
+      document.getElementById('modal-gear').textContent = car.gearbox;
+
+      // Payment Type Badge & Panels
+      const payBadge = document.getElementById('modal-pay-badge');
+      const financeBox = document.getElementById('modal-finance-box');
+      const cashBox = document.getElementById('modal-cash-box');
+      const calcBtn = document.getElementById('modal-calc-btn');
+
+      if (car.paymentType === 'finance') {
+        payBadge.textContent = 'จัดไฟแนนซ์ได้';
+        payBadge.className = 'px-2.5 py-0.5 rounded font-bold text-xs shrink-0 bg-emerald-500/20 text-emerald-400 border border-emerald-500/40';
+        financeBox.classList.remove('hidden');
+        cashBox.classList.add('hidden');
+        calcBtn.classList.remove('hidden');
+
+        const estLoan = calcMonthlyInstallment(car.price, car.financeDetails?.downPayment === 0 ? 0 : 10, car.financeDetails?.termMonths || 72);
+        document.getElementById('modal-monthly-text').textContent = car.financeDetails?.monthlyEstimate || `~${formatMoney(estLoan.actualMonthly)} / เดือน`;
+        document.getElementById('modal-down-text').textContent = car.financeDetails?.downPayment === 0 ? 'ฟรีดาวน์ 0 บาท' : `ดาวน์ ${formatMoney(car.financeDetails?.downPayment || 0)}`;
+      } else {
+        payBadge.textContent = 'ขายสดเท่านั้น (Cash Only)';
+        payBadge.className = 'px-2.5 py-0.5 rounded font-bold text-xs shrink-0 bg-amber-500/20 text-amber-300 border border-amber-500/40';
+        financeBox.classList.add('hidden');
+        cashBox.classList.remove('hidden');
+        calcBtn.classList.add('hidden');
+
+        document.getElementById('modal-cash-note').textContent = car.financeDetails?.note || 'รถปีต่ำกว่าเกณฑ์ไฟแนนซ์ส่วนใหญ่ / ขายสดราคาพิเศษ เล่มพร้อมโอนทันที';
+      }
+
+      // Populate Point-by-Point Descriptions
+      document.getElementById('modal-desc-exterior').textContent = car.specs.exterior;
+      document.getElementById('modal-desc-interior').textContent = car.specs.interior;
+      document.getElementById('modal-desc-engine').textContent = car.specs.engine;
+      document.getElementById('modal-desc-chassis').textContent = car.specs.chassisGuarantee;
+
+      // Render Angle Selector Buttons
+      renderAngleButtons();
+      switchModalAngle('exterior');
+
+      // LINE Consultation Link
+      const lineMsg = encodeURIComponent(
+        `สวัสดีครับ Civic Hub Thailand สนใจสอบถามรถคันนี้ครับ:\n` +
+        `- รุ่น: ${car.title}\n` +
+        `- รหัสโฉม: ${car.gen} (ปี ${car.year})\n` +
+        `- ราคา: ${formatMoney(car.price)} (${car.paymentType === 'finance' ? 'จัดไฟแนนซ์ได้' : 'ตัดสดเท่านั้น'})\n` +
+        `รบกวนขอข้อมูลและรายละเอียดเพิ่มเติมด้วยครับ`
+      );
+      document.getElementById('modal-line-btn').href = `https://line.me/R/msg/text/?${lineMsg}`;
+
+      document.getElementById('car-modal').classList.remove('hidden');
+      if (window.lucide) window.lucide.createIcons();
+    }
+
+    function renderAngleButtons() {
+      if (!activeCar) return;
+      const container = document.getElementById('modal-angle-buttons');
+      const angles = [
+        { key: 'exterior', label: 'ภายนอกรอบคัน' },
+        { key: 'interior', label: 'ภายในห้องโดยสาร' },
+        { key: 'engine', label: 'ห้องเครื่องยนต์' },
+        { key: 'extra', label: 'ท้ายรถ/ตรวจสภาพ' }
+      ];
+
+      container.innerHTML = angles.map(a => {
+        const isActive = activeAngle === a.key;
+        return `
+          <button onclick="switchModalAngle('${a.key}')" class="p-1.5 rounded-xl border text-center transition-all cursor-pointer ${isActive ? 'bg-red-950/80 border-red-500 shadow-md text-white' : 'bg-slate-900 border-slate-800 text-slate-400 hover:text-white'}">
+            <div class="aspect-video w-full rounded-lg overflow-hidden mb-1 bg-black">
+              <img src="${activeCar.images[a.key]}" referrerpolicy="no-referrer" class="w-full h-full object-cover" onerror="this.src='https://images.unsplash.com/photo-1549399542-7e3f8b79c341?w=800&auto=format&fit=crop&q=80'">
+            </div>
+            <div class="text-[10px] font-semibold truncate">${a.label}</div>
+          </button>
+        `;
+      }).join('');
+    }
+
+    function switchModalAngle(angleKey) {
+      if (!activeCar) return;
+      activeAngle = angleKey;
+      const imgEl = document.getElementById('modal-main-img');
+      imgEl.src = activeCar.images[angleKey];
+
+      const labels = {
+        exterior: 'ภายนอกรอบคัน (Exterior Multi-Angle)',
+        interior: 'ภายในห้องโดยสาร (Interior & Cockpit)',
+        engine: 'ห้องเครื่องยนต์ (Engine Bay Inspection)',
+        extra: 'ท้ายรถและจุดตรวจสอบตัวถัง (Boot & Frame Inspection)'
+      };
+      document.getElementById('modal-current-angle-label').textContent = labels[angleKey];
+      renderAngleButtons();
+    }
+
+    function closeCarModal() {
+      document.getElementById('car-modal').classList.add('hidden');
+    }
+
+    function transferActiveCarToCalc() {
+      if (!activeCar) return;
+      closeCarModal();
+      quickCalculateForCar(activeCar.id);
+    }
+
+    function openTestDriveModalForActiveCar() {
+      if (!activeCar) return;
+      closeCarModal();
+      document.getElementById('td-car-name').value = `[${activeCar.gen}] ${activeCar.title}`;
+      document.getElementById('test-drive-modal').classList.remove('hidden');
+    }
+
+    function closeTestDriveModal() {
+      document.getElementById('test-drive-modal').classList.add('hidden');
+    }
+
+    function handleTestDriveSubmit(e) {
+      e.preventDefault();
+      const carName = document.getElementById('td-car-name').value;
+      const date = document.getElementById('td-date').value;
+      const time = document.getElementById('td-time').value;
+      const name = document.getElementById('td-name').value;
+      const phone = document.getElementById('td-phone').value;
+
+      alert(`บันทึกการจองทดลองขับเรียบร้อยแล้ว!\nรถ: ${carName}\nวันและเวลา: ${date} (${time})\nผู้จอง: คุณ${name} (${phone})\nเจ้าหน้าที่จะติดต่อยืนยันนัดหมายล่วงหน้าครับ`);
+      closeTestDriveModal();
+    }
+
+    // Thai Loan Calculator Logic
+    function populateCalcSelect() {
+      const select = document.getElementById('calc-car-select');
+      const financeCars = carsData.filter(c => c.paymentType === 'finance');
+      select.innerHTML = '<option value="CUSTOM">-- ปรับราคาเงินสดเองตามต้องการ --</option>' + 
+        financeCars.map(c => `<option value="${c.id}">[${c.gen}] ${c.title} - ${formatMoney(c.price)}</option>`).join('');
+    }
+
+    function handleCalcCarChange(val) {
+      if (val === 'CUSTOM') return;
+      const car = carsData.find(c => c.id === Number(val));
+      if (car) {
+        calcPrice = car.price;
+        document.getElementById('calc-price-range').value = calcPrice;
+        runLoanCalc();
+      }
+    }
+
+    function handlePriceSlider(val) {
+      calcPrice = Number(val);
+      document.getElementById('calc-car-select').value = 'CUSTOM';
+      runLoanCalc();
+    }
+
+    function setCalcDown(pct) {
+      calcDownPct = pct;
+      document.querySelectorAll('.down-chip').forEach(c => {
+        c.className = 'down-chip py-1.5 rounded-lg border font-mono font-bold text-xs bg-slate-800 text-slate-300 border-slate-700 cursor-pointer';
+      });
+      const activeChip = document.getElementById('down-chip-' + pct);
+      if (activeChip) {
+        activeChip.className = 'down-chip py-1.5 rounded-lg border font-mono font-bold text-xs bg-red-600 text-white border-red-500 cursor-pointer';
+      }
+      runLoanCalc();
+    }
+
+    function setCalcPeriod(months) {
+      calcTermMonths = months;
+      document.querySelectorAll('.term-chip').forEach(c => {
+        c.className = 'term-chip py-2 rounded-xl border text-center bg-slate-800 text-slate-300 border-slate-700 cursor-pointer';
+      });
+      const activeChip = document.getElementById('term-chip-' + months);
+      if (activeChip) {
+        activeChip.className = 'term-chip py-2 rounded-xl border text-center bg-red-600 text-white border-red-500 cursor-pointer';
+      }
+      runLoanCalc();
+    }
+
+    function runLoanCalc() {
+      document.getElementById('calc-price-display').textContent = formatMoney(calcPrice);
+      document.getElementById('calc-down-percent').textContent = calcDownPct + '%';
+
+      const res = calcMonthlyInstallment(calcPrice, calcDownPct, calcTermMonths, calcAnnualRate);
+
+      document.getElementById('calc-down-amount').textContent = formatMoney(res.downAmount);
+      document.getElementById('calc-monthly-result').textContent = formatMoney(res.actualMonthly);
+      document.getElementById('calc-term-summary').textContent = `${calcTermMonths} งวด (${calcTermMonths/12} ปี)`;
+      document.getElementById('calc-principal-display').textContent = formatMoney(res.principal);
+      document.getElementById('calc-interest-display').textContent = formatMoney(res.totalInterest);
+      document.getElementById('calc-vat-display').textContent = formatMoney(res.vatMonthly);
+      document.getElementById('calc-salary-rec').textContent = formatMoney(res.actualMonthly * 2.2);
+    }
+
+    function quickCalculateForCar(carId) {
+      const car = carsData.find(c => c.id === carId);
+      if (!car || car.paymentType === 'cash') return;
+      document.getElementById('calc-car-select').value = car.id;
+      calcPrice = car.price;
+      document.getElementById('calc-price-range').value = calcPrice;
+      runLoanCalc();
+      scrollToLoanCalculator();
+    }
+
+    function scrollToLoanCalculator() {
+      const calcSec = document.getElementById('loan-calculator-section');
+      if (calcSec) {
+        calcSec.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+
+    function shareLoanToLine() {
+      const res = calcMonthlyInstallment(calcPrice, calcDownPct, calcTermMonths, calcAnnualRate);
+      const msg = encodeURIComponent(
+        `สวัสดีครับ Civic Hub Thailand สนใจปรึกษาสินเชื่อ:\n` +
+        `- ราคารถ: ${formatMoney(calcPrice)}\n` +
+        `- เงินดาวน์: ${calcDownPct}% (${formatMoney(res.downAmount)})\n` +
+        `- ยอดจัดสินเชื่อ: ${formatMoney(res.principal)}\n` +
+        `- ระยะเวลาผ่อน: ${calcTermMonths} งวด (${calcTermMonths/12} ปี)\n` +
+        `- ค่างวดประมาณการรวม VAT 7%: ${formatMoney(res.actualMonthly)}/เดือน\n` +
+        `รบกวนประเมินเอกสารการจัดไฟแนนซ์ให้หน่อยครับ`
+      );
+      window.open(`https://line.me/R/msg/text/?${msg}`, '_blank');
+    }
+
+    // App Initialization
+    window.addEventListener('DOMContentLoaded', () => {
+      populateCalcSelect();
+      runLoanCalc();
+      renderCars();
+      if (window.lucide) {
+        window.lucide.createIcons();
+      }
+
+      // Default tomorrow date for test drive
+      const tomorrow = new Date();
+      tomorrow.setDate(tomorrow.getDate() + 1);
+      const dateInput = document.getElementById('td-date');
+      if (dateInput) {
+        dateInput.value = tomorrow.toISOString().split('T')[0];
+      }
+    });
+  </script>
+
+</body>
+</html>
